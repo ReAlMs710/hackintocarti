@@ -8,8 +8,8 @@
 using namespace std;
 
 int main() {
-    String password = "iAmNeverDroppingAgain123";
-    String guess;
+    string password = "iAmNeverDroppingAgain123";
+    string guess;
     cout << "Welcome!" << endl; 
     cout << "Please enter the password: " << endl;
     cin >> guess;
