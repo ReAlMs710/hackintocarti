@@ -7,6 +7,8 @@
 
 using namespace std;
 
+void program();
+
 int main()
 {
     string password = "iAmNeverDroppingAgain123";
@@ -27,11 +29,16 @@ int main()
         else
         {
             cout << "Welcome Playboi Carti!" << endl;
-            // put the real program here!!!!!
+            program();
         }
     }
     else
     {
         cout << "You are not Playboi Carti!" << endl;
     }
+}
+
+void program() {
+    // hi neil
+    cout << "Sigma" << endl;
 }
