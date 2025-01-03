@@ -4,6 +4,7 @@
 // Extra: TBD
 
 #include <iostream>
+#include <cctype>
 
 using namespace std;
 
@@ -11,12 +12,15 @@ void program();
 
 int main()
 {
-    string password = "password";
     string guess;
     cout << "Welcome!" << endl;
     cout << "Please enter the password: " << endl;
     cin >> guess;
-    if (guess == password)
+    for(int i = 0; i < guess.length; i++)
+    {
+        tolower(guess[i]);
+    }
+    if (guess == "password")
     {
         cout << "Welcome Playboi Carti!" << endl;
         cout << "Would you like to drop music? y/n" << endl;
