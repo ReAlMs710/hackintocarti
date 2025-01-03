@@ -20,7 +20,7 @@ int main()
         cout << "Would you like to drop music? y/n" << endl;
         string answer;
         cin >> answer;
-        if(answer == "y")
+        if (answer == "y")
         {
             cout << "You are not Playboi Carti!" << endl;
         }
