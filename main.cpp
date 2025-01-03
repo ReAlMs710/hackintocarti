@@ -8,5 +8,19 @@
 using namespace std;
 
 int main() {
+    String password = "iAmNeverDroppingAgain123";
+    String guess;
     cout << "Welcome!" << endl; 
+    cout << "Please enter the password: " << endl;
+    cin >> guess;
+    if(guess == password)
+    {
+        cout << "Welcome Playboi Carti!" << endl;
+        cout << "Would you like to drop music?" << endl;
+    }
+    else
+    {
+        cout << "You are not Playboi Carti!" << endl;
+    }
+
 }
