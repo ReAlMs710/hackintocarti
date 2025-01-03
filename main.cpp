@@ -11,14 +11,14 @@ void program();
 
 int main()
 {
-    string password = "iAmNeverDroppingAgain123";
+    string password = "password";
     string guess;
     cout << "Welcome!" << endl;
     cout << "Please enter the password: " << endl;
     cin >> guess;
     if (guess == password)
     {
-        cout << "Welcome Playboi Carti!" << endl;
+        cout << "Welcome Playboi Carti!" << endl;+
         cout << "Would you like to drop music? y/n" << endl;
         string answer;
         cin >> answer;
