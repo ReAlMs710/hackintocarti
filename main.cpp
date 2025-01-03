@@ -38,7 +38,8 @@ int main()
     }
 }
 
-void program() {
+void program()
+{
     // hi neil
     cout << "Sigma" << endl;
 }
