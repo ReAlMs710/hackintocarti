@@ -13,12 +13,13 @@ void program();
 int main()
 {
     string guess;
+    string password;
     cout << "Welcome!" << endl;
     cout << "Please enter the password: " << endl;
     cin >> guess;
-    for(int i = 0; i < guess.length; i++)
+    for(int i = 0; i < guess.length(); i++)
     {
-        tolower(guess[i]);
+        password[i] = tolower(guess[i]);
     }
     if (guess == "password")
     {
@@ -44,6 +45,5 @@ int main()
 
 void program()
 {
-    // hi neil
-    cout << "Sigma" << endl;
+    cout << "Welcome real Playboi Carti!" << endl;
 }
