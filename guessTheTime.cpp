@@ -3,9 +3,9 @@
 #include <ctime>
 
 int main() {
-    std::time_t now = std::time(nullptr);
+    std::time_t now = std::time(nullptr); // create a time object for rightn ow
 
-    int utcOffsetHours = 0;
+    int utcOffsetHours = 0; // offset is 0 for britain
 
     now += utcOffsetHours * 3600;
 
@@ -18,10 +18,10 @@ int main() {
     std::cin >> hour;
 
     if(hour == britishHour) {
-        std::cout << "CORRECT!";
+        std::cout << "CORRECT!"; // if you get it right
     }
     else {
-        std::cout << "INCORRECT!";
+        std::cout << "INCORRECT!"; // if you get it wrong
     }
 
     return 0;
