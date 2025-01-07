@@ -11,7 +11,7 @@ int main() {
 
     std::tm* timeZoneTime = std::gmtime(&now);
 
-    int britishHour = timeZoneTime->tm_hour;
+    int britishHour = timeZoneTime->tm_hour; // gets the current hour in Britain
 
     std::cout << "What is the current hour in britain (0 - 24)" << std::endl;
     int hour;
