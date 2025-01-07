@@ -11,7 +11,18 @@ int main() {
 
     std::tm* timeZoneTime = std::gmtime(&now);
 
-    std::cout << "Current time in Britain is: " << std::asctime(timeZoneTime);
+    int britishHour = timeZoneTime->tm_hour;
+
+    std::cout << "What is the current hour in britain (0 - 24)" << std::endl;
+    int hour;
+    std::cin >> hour;
+
+    if(hour == britishHour) {
+        std::cout << "CORRECT!";
+    }
+    else {
+        std::cout << "INCORRECT!";
+    }
 
     return 0;
 }
