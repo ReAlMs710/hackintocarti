@@ -13,20 +13,16 @@ void program();
 int main()
 {
     string guess;
-    string password;
     cout << "Welcome!" << endl;
     cout << "Please enter the password: " << endl;
     cin >> guess;
-    for(int i = 0; i < guess.length(); i++)
-    {
-        password[i] = tolower(guess[i]);
-    }
     if (guess == "password")
     {
         cout << "Welcome Playboi Carti!" << endl;
         cout << "Would you like to drop music? y/n" << endl;
         string answer;
         cin >> answer;
+        tolower(answer);
         if (answer == "y")
         {
             cout << "You are not Playboi Carti!" << endl;
