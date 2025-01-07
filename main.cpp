@@ -20,7 +20,7 @@ int main()
     {
         cout << "Welcome Playboi Carti!" << endl;
         cout << "Would you like to drop music? y/n" << endl;
-        string answer;
+        char answer;
         cin >> answer;
         tolower(answer);
         if (answer == "y")
