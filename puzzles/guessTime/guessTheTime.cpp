@@ -1,20 +1,28 @@
-#include "guessTheTime.h"
+// Guess the current time in london (we will drop the album at that time)
 #include <iostream>
 #include <ctime>
 
-using namespace std;
+int main() {
+    std::time_t now = std::time(nullptr); // create a time object for right now
 
-void printCurrentTime() {
-    time_t now = time(nullptr);
+    int utcOffsetHours = 0; // offset is 0 for britain
 
-    int utcOffsetHours = 0;
+    now += utcOffsetHours * 3600; // 60 min x 60 sec
 
-    now += utcOffsetHours * 3600;
+    std::tm* timeZoneTime = std::gmtime(&now); // get time 
 
-    tm* timeZoneTime = gmtime(&now);
+    int britishHour = timeZoneTime->tm_hour; // gets the current hour in Britain
 
-    cout << "Current time in Britain is: " << asctime(timeZoneTime);
-    
+    std::cout << "What is the current hour in britain (0 - 24)" << std::endl;
+    int hour; // the users response
+    std::cin >> hour; // store user response
+
+    if(hour == britishHour) {
+        std::cout << "CORRECT!"; // if you get it right
+    }
+    else {
+        std::cout << "INCORRECT!"; // if you get it wrong
+    }
+
+    return 0;
 }
-
-
