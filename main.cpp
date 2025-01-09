@@ -1,45 +1,31 @@
 // Chris, Ryan, Neil
 // 1/3/2025
 // Hack Into Carti
-// Extra: TBD
+// Extra: Program can rerun completely, regenerate any of the files from before, and act as if it was ran the first time around, also files are seperated
 
+//main.cpp
 #include <iostream>
 #include <cctype>
+#include "puzzles/guessTime/guessTheTime.h"
+#include "puzzles/findCode/findCode.h"
 
 using namespace std;
 
-void program();
+void getIntro();
 
-int main()
-{
-    string guess;
-    cout << "Welcome!" << endl;
-    cout << "Please enter the password: " << endl;
-    cin >> guess;
-    if (guess == "password")
-    {
-        cout << "Welcome Playboi Carti!" << endl;
-        cout << "Would you like to drop music? y/n" << endl;
-        char answer;
-        cin >> answer;
-        tolower(answer);
-        if (answer == "y")
-        {
-            cout << "You are not Playboi Carti!" << endl;
-        }
-        else
-        {
-            cout << "Welcome Playboi Carti!" << endl;
-            program();
-        }
+int main() {
+    char decision;
+    cout << "WE NEED TO HACK INTO CARTI!!" << endl;
+    cout << "Will you help us? (y/n)" << endl;
+    cin >> decision;
+    decision = tolower(decision);
+    
+    if (decision == 'y') {
+        cout << "okay good lets release iammusic" << endl;
+        loginCodeLogic();
+        printCurrentTime();
     }
-    else
-    {
-        cout << "You are not Playboi Carti!" << endl;
+    else {
+        return 0;
     }
-}
-
-void program()
-{
-    cout << "Welcome real Playboi Carti!" << endl;
 }
