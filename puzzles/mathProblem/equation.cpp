@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 #include "equation.h"
 
 int answer;
