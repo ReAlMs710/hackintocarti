@@ -1,12 +1,17 @@
 // Guess the current time in london (we will drop the album at that time)
 #include <iostream>
 #include <ctime>
+#include "D:\Coding\C++\hackintocarti\puzzles\gameOver\gameOver.h"
+
+using namespace std;
 
 //note to chris: i dont even want to see what you did to this code, but
 //it was formatted TERRIBLY. i had to fix it because g++ was giving me an
 //error when compiling it - neil
 
 int guessTheTime() {
+    string buffer;
+
     std::time_t now = std::time(nullptr); // create a time object for right now
 
     int utcOffsetHours = 0; // offset is 0 for britain
@@ -22,10 +27,13 @@ int guessTheTime() {
     std::cin >> hour; // store user response
 
     if (hour == britishHour) {
-        std::cout << "CORRECT!"; // if you get it right
+        std::cout << "CORRECT!\n"; // if you get it right
+        cout << "Type anything to continue\n";
+        std::cin >> buffer; 
+        system("cls");
+
     }
     else {
-        std::cout << "INCORRECT!"; // if you get it wrong
-        return 0;
+        gameOver();
     }
 }

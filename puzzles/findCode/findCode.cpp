@@ -3,6 +3,7 @@
 #include <cstdlib> //for getenv()
 #include <ctime>
 #include "findCode.h" 
+#include "D:\Coding\C++\hackintocarti\puzzles\gameOver\gameOver.h"
 
 using namespace std;
 
@@ -29,22 +30,23 @@ int loginCodeLogic() {
     outFile << randCode;  
     outFile.close();
 
-    cout << "\nI think that carti's login code is in the Downloads folder!\n" << endl;
+    cout << "I think that carti's login code is in the Downloads folder!\n" << endl;
     cout << "Type anything to continue\n";
     cin >> buffer; 
+    system("cls");
+    cout << "What is the secret code?\n" << endl;
+    cin >> codeGuess; 
 
-    while (true) {
-        cout << "\nWhat is the secret code?\n" << endl;
-        cin >> codeGuess; 
+    if (codeGuess == randCode) {
+        cout << "Correct!\n";
+        cout << "Type anything to continue\n";
+        cin >> buffer;
+        system("cls");
+    }
 
-        if (codeGuess == randCode) {
-            cout << "Correct!\n";
-            break;
-        }
-
-        else {
-            cout << "Wrong!\n";
-        }
+    else {
+        gameOver();
     }
 }
+
 
