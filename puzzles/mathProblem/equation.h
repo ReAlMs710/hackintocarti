@@ -1,6 +1,6 @@
 #ifndef EQUATION_H
 #define EQUATION_H
 
-int equation();
+void equation();
 
 #endif
