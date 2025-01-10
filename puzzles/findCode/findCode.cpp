@@ -6,14 +6,12 @@
 
 using namespace std;
 
-int randNum(); 
-
 int randNum() {
     srand(static_cast<unsigned>(time(0)));
     return 1000 + rand() % 9000;
 }
 
-void loginCodeLogic() {
+int loginCodeLogic() {
     string buffer; 
     int codeGuess;
     int randCode = randNum();
@@ -24,6 +22,7 @@ void loginCodeLogic() {
 
     if (!outFile) {
         cerr << "Something went wrong..." << endl;
+        return 1;
     }
 
     outFile << "The code is ";

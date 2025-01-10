@@ -1,8 +1,9 @@
 #include <iostream>
+#include "equation.h"
 
 int answer;
 
-int main() {
+int equation() {
     std::cout << "What is 808 - 24?" << std::endl;
     std::cin >> answer;
     if (answer == 784) {
@@ -10,5 +11,6 @@ int main() {
     }
     else {
         std::cout << "You are not Playboi Carti!" << std::endl;
+        return 0;
     }
 }
