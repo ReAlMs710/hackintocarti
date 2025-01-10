@@ -3,7 +3,7 @@
 #include <cstdlib> //for getenv()
 #include <ctime>
 #include "findCode.h" 
-#include "D:\Coding\C++\hackintocarti\puzzles\gameOver\gameOver.h"
+#include "gameOver.h"
 
 using namespace std;
 
